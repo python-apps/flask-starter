@@ -13,6 +13,12 @@ def card():
     card=db[0]
     return render_template("cardx.html",card=card)
 
+@app.route("/carddetail/<int:index>")
+def cardetail(index):
+    card=db[index]
+    return render_template("cardx.html",card=card)
+
+
 @app.route("/")
 def welcome():
      return "Hello World"
